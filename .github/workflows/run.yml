@@ -1,0 +1,43 @@
+name: Run Scraper and Upload to FTP
+
+on:
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+  repository_dispatch:
+    types: [run] # Allows remote trigger via API
+
+jobs:
+  scrape-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Scraper
+        run: npm run build
+      
+      - name: Run Scraper
+        run: npm start
+
+      - name: Upload to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 82.25.96.203
+          username: u562040443.dev
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          local-dir: ./
+          server-dir: ./
+          state-name: .ftp-deploy-sync-state.json
+          # We only want to upload the scrape result
+          exclude: |
+            **
+            !scrape.json

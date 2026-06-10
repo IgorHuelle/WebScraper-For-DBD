@@ -1,0 +1,13 @@
+{
+  "killers": {
+    "characters": "https://deadbydaylight.wiki.gg/wiki/Killers",
+    "perks": "https://deadbydaylight.wiki.gg/wiki/Killer_Perks"
+  },
+  "survivors": {
+    "characters": "https://deadbydaylight.wiki.gg/wiki/Survivors",
+    "perks": "https://deadbydaylight.wiki.gg/wiki/Survivor_Perks"
+  },
+  "other": {
+    "baseLink": "https://deadbydaylight.wiki.gg"
+  }
+}

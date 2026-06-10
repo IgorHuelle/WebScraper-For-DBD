@@ -1,0 +1,22 @@
+{
+  "name": "web-scraper-for-dbd",
+  "version": "1.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/jsdom": "^28.0.3",
+    "@types/node": "^25.9.2",
+    "tsc-alias": "^1.8.17",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.17.0",
+    "jsdom": "^29.1.1"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "esnext",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@modules/*": [
+        "./src/modules/*"
+      ],
+      "@data/*": [
+        "./data/*"
+      ],
+      "@appTypes/*": [
+        "./src/types/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ]
+    },
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  }
+}

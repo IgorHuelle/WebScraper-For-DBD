@@ -1,0 +1,22 @@
+{
+  "killers": [
+    {
+      "name": "Universal Builds",
+      "portraitUrl": "/images/genericbuild1.png"
+    }
+  ],
+  "survivors": [
+    {
+      "name": "Solo Survivor",
+      "portraitUrl": "/images/S01_Solo_Portrait.webp"
+    },
+    {
+      "name": "Advanced Builds",
+      "portraitUrl": "/images/S02_SoloAdvanced_Portrait.webp"
+    },
+    {
+      "name": "Team Player",
+      "portraitUrl": "/images/S03_Team_Portrait.webp"
+    }
+  ]
+}
