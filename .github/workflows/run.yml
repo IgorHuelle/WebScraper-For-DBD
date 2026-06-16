@@ -3,7 +3,7 @@ name: Run Scraper and Upload to FTP
 on:
   workflow_dispatch: # Allows manual trigger from GitHub UI
   repository_dispatch:
-    types: [run] # Allows remote trigger via API
+    types: [Run Scraper and Upload to FTP] # Allows remote trigger via API
 
 jobs:
   scrape-and-upload:
