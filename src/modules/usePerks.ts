@@ -31,9 +31,12 @@ const getDescription = (cell: Element): string => {
   const icons = element.querySelectorAll(".iconLink");
   icons.forEach((icon) => icon.remove());
 
+  const lists = element.querySelectorAll("ul, ol");
+  lists.forEach((list) => list.classList.add('descList'));
+
   const links = element.querySelectorAll('a');
   links.forEach((link) => {
-    link.classList.add('link');
+    link.classList.add('descLink');
     link.href = urls.other.baseLink + link.getAttribute('href');
     link.setAttribute("target", "_blank");
   });
