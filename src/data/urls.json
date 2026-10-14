@@ -8,6 +8,7 @@
     "perks": "https://deadbydaylight.wiki.gg/wiki/Survivor_Perks"
   },
   "other": {
-    "baseLink": "https://deadbydaylight.wiki.gg"
+    "baseLink": "https://deadbydaylight.wiki.gg",
+    "patchNotes": "https://deadbydaylight.wiki.gg/wiki/Patches"
   }
 }

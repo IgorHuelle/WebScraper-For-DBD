@@ -4,7 +4,7 @@ import { useProfilesData } from "./useProfilesData.js";
 import { useScrapeData } from "./useScrapeData.js";
 
 export const useConstructScrapeJSON = async () => {
-  const { characters, perks } = await useScrapeData();
+  const { characters, perks, patchNotes } = await useScrapeData();
   const profiles = useProfilesData();
 
   const json = {
@@ -27,7 +27,8 @@ export const useConstructScrapeJSON = async () => {
       ]
     },
     other: {
-      scrapeRequestUNIX: Math.floor(Date.now() / 1000)
+      scrapeRequestUNIX: Math.floor(Date.now() / 1000),
+      patchNumber: patchNotes.patchNumber
     }
   }
 

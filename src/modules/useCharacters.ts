@@ -1,7 +1,7 @@
 import type { CharactersData } from "@appTypes/Characters.js";
 
-import { useDOM } from "./useDOM.js";
 import { useURLsData } from "./useURLsData.js";
+import { useDOM } from "./useDOM.js";
 
 export const useCharacters = async (): Promise<{ characters: CharactersData }> => {
   const urls = useURLsData();

@@ -1,3 +1,5 @@
+type URL = string
+
 export interface UrlsData {
   killers: RoleUrls;
   survivors: RoleUrls;
@@ -5,10 +7,11 @@ export interface UrlsData {
 }
 
 export interface RoleUrls {
-  characters: string;
-  perks: string;
+  characters: URL;
+  perks: URL;
 }
 
 export interface OtherUrls {
-  baseLink: string
+  baseLink: URL
+  patchNotes: URL
 }

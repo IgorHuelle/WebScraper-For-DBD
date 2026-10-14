@@ -46,7 +46,7 @@ const getDescription = (cell: Element): string => {
 
 /** Col 3: character name (first anchor) */
 const getCharacterData = (cell: Element): string => {
-  const charName = cell.querySelector("a")?.textContent?.trim() ?? "";
+  const charName = cell.querySelector("a")?.title?.trim() ?? "";
   return charName
 };
 
