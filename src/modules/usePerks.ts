@@ -45,8 +45,12 @@ const getDescription = (cell: Element): string => {
 };
 
 /** Col 3: character name (first anchor) */
-const getCharacterData = (cell: Element): string => {
-  const charName = cell.querySelector("a")?.title?.trim() ?? "";
+const getCharacterData = (cell: Element, role: string): string => {
+  const charName = (
+    role === "killers"
+      ? cell.querySelector("a")?.textContent?.trim()
+      : cell.querySelector("a")?.title?.trim()
+  ) ?? "";
   return charName
 };
 
@@ -74,7 +78,7 @@ export const usePerks = async (): Promise<{ perks: PerksData }> => {
 
       if (cells.length < 4) continue;
 
-      const charName = getCharacterData(cells[3]!);
+      const charName = getCharacterData(cells[3]!, role);
       const perkName = getPerkName(cells[1]!);
       const perkDesc = getDescription(cells[2]!);
       const perkUrl = getIconData(cells[0]!);
